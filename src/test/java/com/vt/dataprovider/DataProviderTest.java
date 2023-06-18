@@ -62,7 +62,7 @@ public class DataProviderTest {
 		};
 	}
 	
-	@DataProvider
+	@DataProvider(parallel =  true)
 	public Employee[] getEmployeeData() {
 		return new Employee[] {
 				new Employee("ID1", "name1"),

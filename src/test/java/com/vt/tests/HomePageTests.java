@@ -13,13 +13,13 @@ import com.vt.driver.DriverManager;
 
 public class HomePageTests extends BaseTest {
 	
-	@Test
-	public void test2() {
+	@Test(enabled =  false)
+	public void test2_homePage() {
 		DriverManager.getDriver().findElement(By.name("q")).sendKeys("vaishakh", Keys.ENTER);
 	}
 	
-	@Test
-	public void test3() {
+	@Test(enabled = true)
+	public void test3_nextPage() {
 		
 		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(3));
 		WebElement searchElemet = wait.until(ExpectedConditions.elementToBeClickable(By.name("q")));
